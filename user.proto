@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package user;
+option go_package="user";
+
+message User {
+    string name = 1;
+    string email = 2;
+}
+
+message NewUserRequest {
+    User user = 1;
+}
+
+message NewUserResponse {
+    bool success = 1;
+}
+
+
+service NewUserService{
+    // Unary
+    rpc NewUser(NewUserRequest) returns (NewUserResponse) {};
+}
