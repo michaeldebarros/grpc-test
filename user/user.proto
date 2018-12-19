@@ -16,8 +16,7 @@ message NewUserResponse {
     bool success = 1;
 }
 
-
-service NewUserService{
+service UserService{
     // Unary
     rpc NewUser(NewUserRequest) returns (NewUserResponse) {};
 }
